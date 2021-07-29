@@ -7,6 +7,8 @@ col = size(A)(2);
 B = zeros(row,col);
 B = uint8(B);
 
+##threshold = 190;
+
 for i=2:row-2
   for j=2:col-2
     p1 = uint16((A(i-1,j-1,1)+A(i-1,j-1,2)+A(i-1,j-1,3))/3);
@@ -30,7 +32,7 @@ for i=2:row-2
       sobel = 0;
     end
 ##    
-##    if sobel < 190
+##    if sobel < threshold;
 ##      sobel = 0;
 ##    end
 
