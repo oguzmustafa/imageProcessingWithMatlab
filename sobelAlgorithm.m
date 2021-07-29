@@ -1,5 +1,5 @@
 clear all
-A = imread('images/i.jpg');
+A = imread('images/rose.jpg');
 
 row = size(A)(1);
 col = size(A)(2);
@@ -26,10 +26,13 @@ for i=2:row-2
     
     if sobel > 255
       sobel = 255;
-    end
-    if sobel < 190
+    else
       sobel = 0;
     end
+##    
+##    if sobel < 190
+##      sobel = 0;
+##    end
 
     B(i,j) = sobel;
   endfor
