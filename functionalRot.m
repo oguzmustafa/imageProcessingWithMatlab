@@ -1,15 +1,15 @@
 clear all
 A = imread('images/Safari.jpg');
-sat=size(A)(1)
-sut=size(A)(2)
+row=size(A)(1)
+col=size(A)(2)
 shfact=100;
 orj=A;
 
-for i=1:sat
-for j=1:sut
-k=floor( i + shfact*j/sut);
-l=floor( j + shfact*sin(pi*i/sat));
-%  if l<=sut
+for i=1:row
+for j=1:col
+k=floor( i + shfact*j/col);
+l=floor( j + shfact*sin(pi*i/row));
+%  if l<=col
   B(k,l,:)=orj(i,j,:);
 %  end
 end
