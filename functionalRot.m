@@ -1,5 +1,5 @@
 clear all
-A = imread('Safari.jpg');
+A = imread('images/Safari.jpg');
 sat=size(A)(1)
 sut=size(A)(2)
 shfact=100;
